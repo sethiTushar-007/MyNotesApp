@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Register">
+        <LinearLayout
+            android:id="@+id/sign_up_everything"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="50dp"
+            android:paddingLeft="50dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:drawableStart="@drawable/email"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="20dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Id"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_username"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="15">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:drawableStart="@drawable/user"
+                    android:drawableLeft="@drawable/user"
+                    android:drawablePadding="20dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:inputType="textCapWords"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_password1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Set new password"
+                    android:drawableLeft="@drawable/password"
+                    android:drawableStart="@drawable/password"
+                    android:drawablePadding="20dp"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_password2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm password"
+                    android:drawableStart="@drawable/password"
+                    android:drawableLeft="@drawable/password"
+                    android:drawablePadding="20dp"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:onClick="registration"
+                app:cardBackgroundColor="#E53935"
+                app:cardCornerRadius="25dp">
+
+                <TextView
+                    android:id="@+id/registerupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp"
+                    tools:text="Verify Phone Number" />
+            </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:id="@+id/small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already a member? Login"
+                android:textStyle="bold|italic"
+                android:onClick="toLogin"
+                android:textColor="#E53935"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/sign_up_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO INTERNET CONNECTION!"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textColor="#000000"
+            android:visibility="gone"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:src="@drawable/internet"
+            android:visibility="gone"
+            android:id="@+id/sign_up_gif"/>
+
+    </RelativeLayout>
+</ScrollView>

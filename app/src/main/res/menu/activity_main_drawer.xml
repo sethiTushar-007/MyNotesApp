@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:title="Personal Info">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_update"
+                    android:icon="@drawable/update"
+                    android:title="Update details" />
+                <item
+                    android:id="@+id/nav_photo"
+                    android:icon="@drawable/change_photo"
+                    android:title="Change photo"/>
+
+                <item
+                    android:id="@+id/nav_phone"
+                    android:icon="@drawable/phone"
+                    android:title="Change phone number"/>
+
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Other options">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Log out" />
+            <item
+                android:id="@+id/nav_delete"
+                android:icon="@drawable/delete"
+                android:title="Delete account" />
+        </menu>
+    </item>
+
+</menu>
